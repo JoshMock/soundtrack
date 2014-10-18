@@ -12,7 +12,6 @@ var testConfig = [
         onVideoChange: function (options) {
             // change tone based on video brightness
             this.frequency.value = options.brightness * options.brightness / 70;
-            console.log('frequency', this.frequency.value);
         }
     },
     {
@@ -32,7 +31,6 @@ var testConfig = [
             }
 
             this.curve = curve;
-            console.log('wave shaper', curve);
         }
     },
     {
@@ -41,7 +39,6 @@ var testConfig = [
         onVideoChange: function (options) {
             // change gain based on redness
             this.gain.value = options.averageColor[0] * 5;
-            console.log('gain', this.gain.value);
         }
     }
 ];
