@@ -1,0 +1,15 @@
+{
+  "name": "soundtrack",
+  "version": "0.0.0",
+  "description": "Make sounds with your camera.",
+  "author": "Josh Mock",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
