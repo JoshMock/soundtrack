@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Soundtrack</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
 <body>
-    <video autoplay width="400" height="300"></video>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <video autoplay width="400" height="300"></video>
+            </div>
 
-    <h1>Soundtrack</h1>
-    <p>Synthesized sound in <em>pure JavaScript</em> using your webcam. Powered by WebRTC and the Web Audio API. This should work in latest Chrome and Firefox at the very least.</p>
-    <p>You might want to turn down your speakers before turning on your camera.</p>
-    <p>Then just change what your camera is pointed at and it'll change what you hear!</p>
-    <p>Check out the <a href="https://github.com/JoshMock/soundtrack" target="_blank">Github repo</a> for more deets.</p>
+            <div class="col-md-6">
+                <h1>Soundtrack</h1>
 
-    <script src="/build/js/main.min.js"></script>
+                <ol>
+                    <li>Turn down your speakers (just to be safe)</li>
+                    <li>Allow access to your webcam</li>
+                    <li>Listen to wacky sounds that change based on the brightness, color, etc. of your webcam's output.</li>
+                </ol>
+
+                <p><strong>Soundtrack</strong> is synthesized audio generated with <em>pure JavaScript</em> using your webcam. Powered by <a href="http://www.webrtc.org/">WebRTC</a> and the <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">Web Audio API</a>. This should work in any version of any browser that <a href="http://caniuse.com/#feat=audio-api">supports the Web Audio API</a> and <a href="http://caniuse.com/#search=webrtc">supports WebRTC</a>.</p>
+                <p>Check the <a href="https://github.com/JoshMock/soundtrack">Github repo</a> for more info!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="build/js/main.min.js"></script>
 </body>
 </html>
