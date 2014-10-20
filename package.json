@@ -8,13 +8,22 @@
     "lodash": "^2.4.1"
   },
   "devDependencies": {
+    "browserify": "^6.1.0",
+    "browserify-shim": "^3.8.0",
     "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-shell": "^1.1.1",
     "minifyify": "^4.4.0"
   },
+  "main": "./js/main.js",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {},
   "scripts": {
     "start": "python -m SimpleHTTPServer",
-    "prepublish": "mkdir -p build && mkdir -p build/js && browserify --entry js/main.js --debug -p [minifyify --map /build/js/main.min.map --output build/js/main.min.map] > build/js/main.min.js"
+    "prepublish": "mkdir -p build && mkdir -p build/js && ./node_modules/.bin/browserify --entry js/main.js --debug -p [minifyify --map /build/js/main.min.map --output build/js/main.min.map] > build/js/main.min.js"
   }
 }
