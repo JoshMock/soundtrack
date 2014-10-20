@@ -9,7 +9,12 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-browserify": "^3.0.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^1.1.1",
+    "minifyify": "^4.4.0"
+  },
+  "scripts": {
+    "start": "python -m SimpleHTTPServer",
+    "prepublish": "mkdir -p build && mkdir -p build/js && browserify --entry js/main.js --debug -p [minifyify --map /build/js/main.min.map --output build/js/main.min.map] > build/js/main.min.js"
   }
 }

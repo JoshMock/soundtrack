@@ -5,7 +5,6 @@ var NoiseMaker = require('./noisemaker');
 function successCallback (stream) {
     var videoElement = document.querySelector('video');
     videoElement.src = window.URL ? window.URL.createObjectURL(stream) : stream;
-
     var noisemaker = new NoiseMaker(videoElement);
 }
 

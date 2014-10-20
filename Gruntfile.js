@@ -2,27 +2,20 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        browserify: {
-            dist: {
-                options: {
-                    browserifyOptions: {
-                        debug: true
-                    }
-                },
-                files: {
-                    'build/js/main.min.js': ['js/main.js']
-                }
+        shell: {
+            browserify: {
+                command: 'npm install'
             }
         },
 
         watch: {
             js: {
                 files: ['js/**/*.js'],
-                tasks: ['browserify']
+                tasks: ['shell:browserify']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-shell');
 };
