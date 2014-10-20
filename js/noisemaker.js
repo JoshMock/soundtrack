@@ -38,7 +38,7 @@ var testConfig = [
         gain: 1,
         onVideoChange: function (options) {
             // change gain based on redness
-            this.gain.value = options.averageColor[0] * 5;
+            this.gain.value = 1 / options.averageColor[0];
         }
     }
 ];
